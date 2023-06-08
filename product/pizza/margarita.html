@@ -33,6 +33,7 @@
         <img
           src="/assets/images/pizze/pizza-margarita-bez-tla.png"
           alt="Zdjęcie"
+          data-product-image
         />
         <div class="text">
           <p class="name">Pizza <span>Margarita</span></p>
@@ -46,7 +47,13 @@
             <div>
               <label class="option-name">Rozmiar:</label>
             </div>
-            <input type="radio" name="rozmiar" value="24" id="rozmiar-mala" />
+            <input
+              type="radio"
+              name="rozmiar"
+              value="mala, 17"
+              id="rozmiar-mala"
+              checked
+            />
             <label for="rozmiar-mala">Mała 24 cm (17,00zł)</label>
             <br />
             <input type="radio" name="rozmiar" value="32" id="rozmiar-duza" />
@@ -78,6 +85,7 @@
               name="grubosc"
               value="cienkie"
               id="grubosc-cienkie"
+              checked
             />
             <label for="grubosc-cienkie">Cienkie</label>
             <br />
@@ -111,6 +119,7 @@
                 type="radio"
                 name="more-ingredients"
                 value="nie"
+                checked
                 onclick="hideIngredients()"
               />
               Nie
@@ -122,12 +131,12 @@
               <label class="option-name">Lista składników:</label>
             </div>
             <label>
-              <input type="checkbox" name="skladnik" value="skladnik1" />
+              <input type="checkbox" name="skladnik" value="skladnik1, 2,0" />
               Składnik 1 (2,00 zł)
             </label>
             <br />
             <label>
-              <input type="checkbox" name="skladnik" value="skladnik2" />
+              <input type="checkbox" name="skladnik" value="skladnik2, 2,0" />
               Składnik 2 (2,00 zł)
             </label>
             <br />
@@ -139,16 +148,21 @@
               <label class="option-name">Wybierz sos:</label>
             </div>
             <label>
-              <input type="checkbox" name="sos" value="ketchup" />
+              <input type="checkbox" name="sos" value="bez" checked />
+              Bez sosu
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" name="sos" value="ketchup, 1,5" />
               Ketchup (1,50 zł)
             </label>
             <br />
             <label>
-              <input type="checkbox" name="sos" value="czosnkowy" />
+              <input type="checkbox" name="sos" value="czosnkowy, 1,5" />
               Czosnkowy (1,50 zł) </label
             ><br />
             <label>
-              <input type="checkbox" name="sos" value="ostry" />
+              <input type="checkbox" name="sos" value="ostry, 1,5" />
               Ostry (1,50 zł)
             </label>
             <br />
@@ -166,6 +180,7 @@
             class="add-to-cart-btn"
             data-add-to-cart
             data-product-id="margarita"
+            type="submit"
           >
             Dodaj do koszyka
           </button>

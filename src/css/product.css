@@ -257,7 +257,7 @@ textarea#komentarz:focus {
 
 /* ============== FOOTER POCZĄTEK ============*/
 .footer-distributed {
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   margin-top: 20px;
   background: #24252a;
