@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+html {
+	scroll-behavior: smooth;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background-color: #24252a;
+}
+
+/*================ HEADER POCZĄTEK============*/
+
+li,
+a,
+button {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	font-size: 16px;
+	color: #edf0f1;
+	text-decoration: none;
+}
+
+header {
+	top: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 10%;
+	height: 60px;
+	box-shadow: 0 2px 4px rgba(255, 165, 0, 0.5);
+	border-radius: 10px;
+}
+
+.sticky-header {
+	position: fixed;
+	z-index: 100;
+	background-color: #24252a;
+	transition: all 0.3s ease-in-out;
+}
+
+.sticky-header img.logo {
+	width: 75px;
+}
+
+.sticky-header nav {
+	margin-left: auto;
+}
+
+.sticky-header nav ul.nav__links li {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+.sticky-header nav ul.nav__links li a {
+	transition: all 0.3s ease 0s;
+}
+
+.sticky-header nav ul.nav__links li a:hover {
+	color: rgba(255, 165, 0, 0.8);
+}
+
+.sticky-header .cta {
+	margin-left: 20px;
+}
+
+.sticky-header button {
+	padding: 9px 25px;
+	background-color: rgba(255, 165, 0, 1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+
+.sticky-header button:hover {
+	background-color: rgba(255, 165, 0, 0.8);
+}
+
+.sticky-header.scrolled {
+	background-color: #24252a;
+}
+
+.logo {
+	cursor: pointer;
+	width: 75px;
+}
+.nav__links {
+	list-style: none;
+}
+
+.nav__links li {
+	display: inline-block;
+	padding: 0 20px;
+}
+
+.nav__links li a {
+	transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+	color: rgba(255, 165, 0, 0.8);
+}
+
+button {
+	padding: 9px 25px;
+	background-color: rgba(255, 165, 0, 1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+}
+button:hover {
+	background-color: rgba(255, 165, 0, 0.8);
+}
+
+/*================ HEADER KONIEC============*/
+
+/*================ SLIDER POCZĄTEK============*/
+.slider-container {
+	width: 1000px;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+	margin: 100px auto 0;
+	border-radius: 10px; /* Dodanie zaokrąglenia */
+	box-shadow: 0 2px 6px rgba(255, 165, 0, 1); /* Dodanie cienia */
+}
+
+.slider {
+	width: 300%;
+	height: 400px;
+	display: flex;
+	transition: transform 1s ease-in-out;
+	transform: translateX(0);
+	border-radius: 10px; /* Dodanie zaokrąglenia */
+}
+
+.slide {
+	width: 33.33%;
+	height: 400px;
+	transition: transform 1s ease-in-out;
+	border-radius: 10px; /* Dodanie zaokrąglenia */
+	position: relative;
+}
+
+.slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 10px; /* Dodanie zaokrąglenia */
+}
+
+.slide-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: rgba(255, 165, 0, 1);
+	color: #fff;
+	text-decoration: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	position: absolute; /* Dodajemy pozycję absolutną */
+	bottom: 20px; /* Ustawiamy odstęp od dolnej krawędzi slajdu */
+	left: 50%; /* Ustawiamy środek przycisku */
+	transform: translateX(-50%); /* Wycentrowanie przycisku */
+	z-index: 1; /* Zmieniamy indeks warstwy, aby przycisk był na wierzchu */
+}
+
+.slide-button:hover {
+	background-color: rgba(255, 165, 0, 0.8);
+}
+
+/*================ SLIDER KONIEC============*/
+
+/*================ O NAS POCZĄTEK ============*/
+.about-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 700px;
+	width: 1000px;
+	margin: 50px auto 50px;
+	padding: 50px;
+	box-sizing: border-box;
+
+	border-radius: 10px;
+}
+
+.about-image {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.image-container {
+	max-width: 100%; /* Maksymalna szerokość kontenera */
+	max-height: 100%; /* Maksymalna wysokość kontenera */
+}
+
+.about-image img {
+	max-width: 100%; /* Zdjęcie dostosuje się do szerokości kontenera */
+	max-height: 100%; /* Zdjęcie dostosuje się do wysokości kontenera */
+	border-radius: 10px;
+	box-shadow: 0 0.1rem 0.5rem rgba(255, 165, 0, 1);
+	border: 0.1rem solid rgba(255, 165, 0, 0.8);
+}
+
+.about-text {
+	flex: 1;
+	margin-left: 50px;
+}
+
+.about-heading {
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-family: 'Montserrat', sans-serif;
+	color: rgba(255, 165, 0, 1);
+}
+
+.about-description {
+	font-size: 16px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+}
+/*================ O NAS KONIEC ============*/
+
+/* ============== NASZE SPECJALNOŚCI POCZĄTEK===========*/
+.heading {
+	text-align: center;
+	font-size: 2.5rem;
+	padding: 2rem;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.heading span {
+	color: rgba(255, 165, 0, 1);
+}
+.speciality .box-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	justify-content: center; /* Wyśrodkowanie boxów */
+}
+
+.speciality .box-container .box {
+	flex: 0 0 300px; /* Ustalenie szerokości boxa na 300px */
+	width: 300px;
+	height: 300px;
+	position: relative;
+	overflow: hidden;
+	box-shadow: 0 0.1rem 0.5rem rgba(255, 165, 0, 1);
+	border: 0.1rem solid rgba(255, 165, 0, 0.8);
+	cursor: pointer;
+	border-radius: 0.5rem;
+}
+
+.speciality .box-container .box .image {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: -100%; /* Zmieniamy wartość top na 100% */
+	left: 0;
+	transition: top 0.8s ease; /* Dodajemy płynną animację */
+}
+
+.speciality .box-container .box:hover .image {
+	top: 0; /* Zmieniamy wartość top na 0 po najechaniu na box */
+}
+
+.speciality .box-container .box .content {
+	text-align: center;
+	background-color: #24252a;
+	padding: 1.5rem;
+}
+
+.speciality .box-container .box .content img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+
+.speciality .box-container .box .content h3 {
+	font-size: 1.4rem;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.speciality .box-container .box .content p {
+	font-size: 0.8rem;
+	color: rgba(255, 165, 0, 0.8);
+	font-family: 'Montserrat', sans-serif;
+	padding: 1rem 0;
+}
+/* ============== NASZE SPECJALNOŚCI KONIEC===========*/
+
+/* ============== KATEGORIE MENU POCZĄTEK===========*/
+.menu-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.menu-title {
+	margin-top: 20px;
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	color: rgba(255, 165, 0, 1);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.category-container {
+	display: flex;
+	justify-content: space-between;
+	gap: 10px;
+	margin-top: 20px;
+}
+
+.category {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+}
+
+.category.active {
+	border-color: rgba(255, 165, 0, 1);
+}
+
+.category img {
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	margin-bottom: 10px;
+	transition: 0.3s;
+	border: 2px solid white;
+}
+
+.category.active img,
+.category img:hover {
+	border: 2px solid rgba(255, 165, 0, 1);
+	box-shadow: 0 2px 4px rgba(255, 165, 0, 1);
+}
+
+.category p {
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	color: rgba(255, 165, 0, 1);
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* ============== KATEGORIE MENU KONIEC===========*/
+
+/* ============== POZYCJE W KATEGORIACH POCZĄTEK===========*/
+.item-container {
+	display: none;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	width: 100%;
+	justify-content: center;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 10px;
+	width: 15%;
+}
+
+.item img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	margin-bottom: 10px;
+	border-radius: 50%;
+	border: 2px solid white;
+	transition: all 0.3s ease 0s;
+}
+
+.item img:hover {
+	border: 2px solid rgba(255, 165, 0, 1);
+	box-shadow: 0 2px 4px rgba(255, 165, 0);
+}
+
+.item h3 {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	color: rgba(255, 165, 0, 1);
+	font-family: 'Montserrat', sans-serif;
+	margin-bottom: 5px;
+}
+
+.item h3 span {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.item p {
+	margin-top: auto;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	color: rgba(255, 165, 0, 1);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.item p span {
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	margin: 0;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+}
+.item .price {
+	margin-top: 15px; /* Przesuwa cenę na dolną krawędź */
+}
+
+.item a {
+	display: block;
+	padding: 10px 20px;
+	background-color: rgba(255, 165, 0, 1);
+	color: white;
+	text-decoration: none;
+	border-radius: 25px;
+	transition: 0.3s;
+	margin-top: 5px;
+}
+
+.item a:hover {
+	background-color: rgba(255, 165, 0, 0.8);
+}
+
+.item.animate-item {
+	animation-name: fadeIn;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+/* ============== POZYCJE W KATEGORIACH KONIEC===========*/
+
+.contact-section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 700px;
+	width: 1000px;
+	margin: 50px auto 50px;
+	padding: 50px;
+	box-sizing: border-box;
+
+	border-radius: 10px;
+}
+
+.contact-image {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.image-container {
+	max-width: 100%; /* Maksymalna szerokość kontenera */
+	max-height: 100%; /* Maksymalna wysokość kontenera */
+}
+
+.contact-image img {
+	max-width: 100%; /* Zdjęcie dostosuje się do szerokości kontenera */
+	max-height: 100%; /* Zdjęcie dostosuje się do wysokości kontenera */
+	border-radius: 10px;
+	box-shadow: 0 0.1rem 0.5rem rgba(255, 165, 0, 1);
+	border: 0.1rem solid rgba(255, 165, 0, 0.8);
+}
+
+.contact-text {
+	flex: 1;
+	margin-left: 50px;
+}
+.contact-text h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	color: rgba(255, 165, 0, 1);
+	margin-bottom: 10px;
+}
+
+.contact-heading {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-family: 'Montserrat', sans-serif;
+	color: rgba(255, 165, 0, 1);
+}
+.contact-heading span {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+}
+
+.contact-description {
+	font-size: 14px;
+	line-height: 1.5;
+	margin-bottom: 20px;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+}
+
+/* ============== FOOTER POCZĄTEK ============*/
+.footer-distributed {
+	background: #24252a;
+
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+	box-shadow: 0 2px 10px rgba(255, 165, 0, 3);
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+	width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+	color: #ffffff;
+	font: normal 36px 'Montserrat';
+	margin: 0;
+}
+.footer-distributed h2 {
+	margin-top: 20px;
+	color: #ffffff;
+	font: normal 16px 'Montserrat';
+	margin-bottom: 0;
+}
+
+.footer-distributed h3 span {
+	color: rgba(255, 165, 0, 1);
+	font-family: 'Montserrat', sans-serif;
+}
+
+.footer-company-name {
+	color: #fff;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+	width: 35%;
+}
+
+.footer-distributed .footer-center i {
+	background-color: #24252a;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+	font-size: 17px;
+	line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+	display: inline-block;
+	color: #ffffff;
+	font-weight: 400;
+	vertical-align: middle;
+	margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+	display: block;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 2;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.footer-distributed .footer-center p a {
+	color: rgba(255, 165, 0, 1);
+	text-decoration: none;
+}
+
+.footer-distributed .footer-links a:before {
+	content: '|';
+	font-weight: 300;
+	font-size: 20px;
+	left: 0;
+	color: #fff;
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+	content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+	width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+	line-height: 20px;
+	color: #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.footer-distributed .footer-company-about span {
+	display: block;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+	margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color: #24252a;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-right: 3px;
+	margin-bottom: 5px;
+	transition: 0.3s;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+.footer-distributed .footer-icons a:hover {
+	color: rgba(255, 165, 0, 1);
+}
+/* ============== FOOTER KONIEC  ============*/

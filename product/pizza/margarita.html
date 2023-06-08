@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e7dd2059d3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/src/css/product.css" />
+    <title>Pizzeria Aniela</title>
+  </head>
+
+  <body>
+    <!-- HEADER POCZĄTEK -->
+    <header class="sticky-header">
+      <img class="logo" src="/assets/images/aniela-logo2021.png" alt="logo" />
+      <a class="cta" onclick="toggleCart()"><button>Koszyk</button></a>
+    </header>
+    <!-- HEADER KONIEC -->
+
+    <div class="order-section" data-aos="fade-up">
+      <div class="left-box">
+        <img
+          src="/assets/images/pizze/pizza-margarita-bez-tla.png"
+          alt="Zdjęcie"
+        />
+        <div class="text">
+          <p class="name">Pizza <span>Margarita</span></p>
+          <p>Składniki: <span>sos, ser, oregano, pomidor</span></p>
+        </div>
+      </div>
+      <div class="right-box">
+        <h2>Spersonalizuj swój wybór</h2>
+        <form name="add-to-cart" class="add-to-cart-form">
+          <div class="option-group">
+            <div>
+              <label class="option-name">Rozmiar:</label>
+            </div>
+            <input type="radio" name="rozmiar" value="24" id="rozmiar-mala" />
+            <label for="rozmiar-mala">Mała 24 cm (17,00zł)</label>
+            <br />
+            <input type="radio" name="rozmiar" value="32" id="rozmiar-duza" />
+            <label for="rozmiar-duza">Duża 32 cm (23,00 zł)</label>
+            <br />
+            <input
+              type="radio"
+              name="rozmiar"
+              value="41"
+              id="rozmiar-familijna"
+            />
+            <label for="rozmiar-familijna">Familijna 41 cm (32,50 zł)</label>
+            <br />
+            <input
+              type="radio"
+              name="rozmiar"
+              value="60"
+              id="rozmiar-ogromna"
+            />
+            <label for="rozmiar-ogromna">Ogromna 60 cm (54,00 zł)</label>
+          </div>
+
+          <div class="option-group">
+            <div>
+              <label class="option-name">Grubość ciasta:</label>
+            </div>
+            <input
+              type="radio"
+              name="grubosc"
+              value="cienkie"
+              id="grubosc-cienkie"
+            />
+            <label for="grubosc-cienkie">Cienkie</label>
+            <br />
+            <input
+              type="radio"
+              name="grubosc"
+              value="grube"
+              id="grubosc-grube"
+            />
+            <label for="grubosc-grube">Grube</label>
+          </div>
+
+          <div class="option-group">
+            <div>
+              <label for="more-ingredients" class="option-name"
+                >Dodaj więcej składników:</label
+              >
+            </div>
+            <label>
+              <input
+                type="radio"
+                name="more-ingredients"
+                value="tak"
+                onclick="showIngredients()"
+              />
+              Tak
+            </label>
+            <br />
+            <label>
+              <input
+                type="radio"
+                name="more-ingredients"
+                value="nie"
+                onclick="hideIngredients()"
+              />
+              Nie
+            </label>
+          </div>
+
+          <div class="ingredients-list" id="ingredients-list">
+            <div>
+              <label class="option-name">Lista składników:</label>
+            </div>
+            <label>
+              <input type="checkbox" name="skladnik" value="skladnik1" />
+              Składnik 1 (2,00 zł)
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" name="skladnik" value="skladnik2" />
+              Składnik 2 (2,00 zł)
+            </label>
+            <br />
+            <!-- dodaj więcej składników tutaj -->
+          </div>
+
+          <div class="sauce-list">
+            <div>
+              <label class="option-name">Wybierz sos:</label>
+            </div>
+            <label>
+              <input type="checkbox" name="sos" value="ketchup" />
+              Ketchup (1,50 zł)
+            </label>
+            <br />
+            <label>
+              <input type="checkbox" name="sos" value="czosnkowy" />
+              Czosnkowy (1,50 zł) </label
+            ><br />
+            <label>
+              <input type="checkbox" name="sos" value="ostry" />
+              Ostry (1,50 zł)
+            </label>
+            <br />
+            <!-- dodaj więcej sosów tutaj -->
+          </div>
+
+          <div class="option-group">
+            <div>
+              <label for="komentarz" class="option-name">Komentarz:</label>
+            </div>
+            <textarea id="komentarz" name="komentarz"></textarea>
+          </div>
+
+          <button
+            class="add-to-cart-btn"
+            data-add-to-cart
+            data-product-id="margarita"
+          >
+            Dodaj do koszyka
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="cart-overlay">
+      <div class="cart">
+        <h2>Koszyk</h2>
+        <div class="cart-items"></div>
+        <button class="close-cart-btn" onclick="closeCart()">Zamknij</button>
+      </div>
+    </div>
+
+    <!--================== FOOTER====================-->
+    <footer class="footer-distributed">
+      <div class="footer-left">
+        <h3>Pizzeria<span>Aniela</span></h3>
+        <p class="footer-company-name">Artur © 2023</p>
+      </div>
+
+      <div class="footer-center" id="contactus">
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>ul. Braci Śniadeckich 2</span> Nowa Sarzyna</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>17 24 11 464</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p>
+            <a href="mailto:pizzeria-aniela@aniela.com"
+              >pizzeria-aniela@aniela.com</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>Jesteśmy z wami już od 1999!</span>
+          Nasza pizzeria rozpieszcza wasze podniebienia od wielu wielu lat!
+          Jeśli nie miałeś okazji spróbować naszych dań to własnie przyszedł na
+          to czas! Nie czekaj i zamów już teraz!
+        </p>
+
+        <div class="footer-icons">
+          <a href="https://www.facebook.com/profile.php?id=100063614171370"
+            ><i class="fa fa-facebook"></i
+          ></a>
+          <a href="https://www.facebook.com/profile.php?id=100063614171370"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <!--================== FOOTER KONIEC ====================-->
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/src/js/product.js"></script>
+    <script src="/src/js/add-to-cart.js"></script>
+  </body>
+</html>
