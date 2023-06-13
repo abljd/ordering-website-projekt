@@ -82,6 +82,7 @@ class Cart {
         cartState.items = updatedCartItems;
         localStorage.setItem("cart", JSON.stringify(cartState));
         this.renderCartItems();
+        this.setCartCountBadge();
       });
     });
   }

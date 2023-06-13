@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/e7dd2059d3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/css/product.css" />
+    <link rel="stylesheet" href="/src/css/cart.css" />
+    <title>Pizzeria Aniela</title>
+</head>
+
+<body>
+    <!-- HEADER POCZĄTEK -->
+    <header class="sticky-header">
+        <a href="/">
+            <img class="logo" src="/assets/images/aniela-logo2021.png" alt="logo" />
+        </a>
+        <button class="btn-cart btn-toggle-cart">Koszyk <span></span></button>
+    </header>
+    <!-- HEADER KONIEC -->
+
+    <div class="order-section" data-aos="fade-up">
+        <div class="left-box">
+            <img src="/assets/images/pizze/pizza-salami-bez-tla.png" alt="Zdjęcie" />
+            <div class="text">
+                <p class="name">Pizza <span>Salami</span></p>
+                <p>Składniki: <span>sos, ser, oregano, salami</span></p>
+            </div>
+        </div>
+        <div class="right-box">
+            <h2>Spersonalizuj swój wybór</h2>
+            <form name="add-to-cart" class="add-to-cart-form">
+                <input type="hidden" name="type" value="pizza" />
+                <input type="hidden" name="name" value="Salami" />
+                <input type="hidden" name="img" value="/assets/images/pizze/pizza-salami.png" />
+                <div class="option-group">
+                    <div>
+                        <label class="option-name">Rozmiar:</label>
+                    </div>
+                    <input type="radio" name="rozmiar" value="mała, 20" id="rozmiar-mala" checked />
+                    <label for="rozmiar-mala"> Mała 24 cm (20,00zł) </label>
+                    <br />
+                    <input type="radio" name="rozmiar" value="duża, 26.5" id="rozmiar-duza" />
+                    <label for="rozmiar-duza"> Duża 32 cm (26,50 zł) </label>
+                    <br />
+                    <input type="radio" name="rozmiar" value="familijna, 32.5" id="rozmiar-familijna" />
+                    <label for="rozmiar-familijna">Familijna 41 cm (36,50 zł)</label>
+                    <br />
+                    <input type="radio" name="rozmiar" value="ogromna, 60.5" id="rozmiar-ogromna" />
+                    <label for="rozmiar-ogromna">Ogromna 60 cm (60,50 zł)</label>
+                </div>
+
+                <div class="option-group">
+                    <div>
+                        <label class="option-name">Grubość ciasta:</label>
+                    </div>
+                    <input type="radio" name="grubosc" value="cienkie" id="grubosc-cienkie" checked />
+                    <label for="grubosc-cienkie">Cienkie</label>
+                    <br />
+                    <input type="radio" name="grubosc" value="grube" id="grubosc-grube" />
+                    <label for="grubosc-grube">Grube</label>
+                </div>
+
+                <div class="option-group">
+                    <div>
+                        <label for="more-ingredients" class="option-name">Dodaj więcej składników:</label>
+                    </div>
+                    <label>
+                        <input type="radio" name="more-ingredients" value="tak" onclick="showIngredients()" />
+                        Tak
+                    </label>
+                    <br />
+                    <label>
+                        <input type="radio" name="more-ingredients" value="nie" checked onclick="hideIngredients()" />
+                        Nie
+                    </label>
+                </div>
+
+                <div class="ingredients-list" id="ingredients-list">
+                    <div>
+                        <label class="option-name">Lista składników:</label>
+                    </div>
+                    <label>
+                        <input type="checkbox" name="skladnik" value="skladnik1, 2" />
+                        Składnik 1 (2,00 zł)
+                    </label>
+                    <br />
+                    <label>
+                        <input type="checkbox" name="skladnik2" value="skladnik2, 2" />
+                        Składnik 2 (2,00 zł)
+                    </label>
+                    <br />
+                </div>
+
+                <div class="sauce-list">
+                    <div>
+                        <label class="option-name">Wybierz sos:</label>
+                    </div>
+                    <label>
+                        <input type="checkbox" name="sos_k" value="ketchup, 1.5" />
+                        Ketchup (1,50 zł)
+                    </label>
+                    <br />
+                    <label>
+                        <input type="checkbox" name="sos_cz" value="czosnkowy, 1.5" />
+                        Czosnkowy (1,50 zł) </label><br />
+                    <label>
+                        <input type="checkbox" name="sos_os" value="ostry, 1.5" />
+                        Ostry (1,50 zł)
+                    </label>
+                    <br />
+                </div>
+
+                <div class="option-group">
+                    <div>
+                        <label for="komentarz" class="option-name">Komentarz:</label>
+                    </div>
+                    <textarea id="komentarz" name="komentarz"></textarea>
+                </div>
+
+                <button class="add-to-cart-btn" data-add-to-cart data-product-id="salami" type="submit">
+                    Dodaj do koszyka
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="cart-overlay">
+        <div class="cart">
+            <div class="cart-header">
+                <h2>Koszyk</h2>
+                <button class="cart-header__close-btn btn-toggle-cart">X</button>
+            </div>
+            <div class="cart-items"></div>
+            <div class="cart-empty">
+                <h3>Twój koszyk jest pusty</h3>
+                <button><a href="/">Zobacz nasze menu</a></button>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Razem:</span><span class="cart-total__value"></span>
+                </div>
+                <!-- <button class="close-cart-btn btn-toggle-cart">Zamknij</button> -->
+            </div>
+        </div>
+    </div>
+    <template id="cart-item-template">
+        <div class="cart-item">
+            <div class="cart-item__img">
+                <img src="" alt="" />
+            </div>
+            <div class="cart-item__details">
+                <h3 class="cart-item__title"></h3>
+                <span>
+                    Rozmiar:
+                    <span class="cart-item__size"></span>
+                    zł
+                </span>
+            </div>
+            <div class="cart-item__price"></div>
+            <div class="cart-item__remove" data-line-item-id>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+            </div>
+        </div>
+    </template>
+    <!--================== FOOTER====================-->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3>Pizzeria<span>Aniela</span></h3>
+            <p class="footer-company-name">Artur © 2023</p>
+        </div>
+
+        <div class="footer-center" id="contactus">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>ul. Braci Śniadeckich 2</span> Nowa Sarzyna</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>17 24 11 464</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p>
+                    <a href="mailto:pizzeria-aniela@aniela.com">pizzeria-aniela@aniela.com</a>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Jesteśmy z wami już od 1999!</span>
+                Nasza pizzeria rozpieszcza wasze podniebienia od wielu wielu lat!
+                Jeśli nie miałeś okazji spróbować naszych dań to własnie przyszedł na
+                to czas! Nie czekaj i zamów już teraz!
+            </p>
+
+            <div class="footer-icons">
+                <a href="https://www.facebook.com/profile.php?id=100063614171370"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100063614171370"><i class="fa fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!--================== FOOTER KONIEC ====================-->
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/src/js/product.js"></script>
+    <script src="/src/js/add-to-cart.js"></script>
+    <script src="/src/js/cart.js"></script>
+</body>
+
+</html>

@@ -2,25 +2,20 @@
 /* global $ */
 
 /*= ================== POCZĄTEK SLIDERA =================== */
-// Zdefiniowanie indeksu bieżącego slajdu
+
 let currentSlide = 0;
-
-// Pobranie wszystkich elementów slajdów
 const slides = Array.from(document.querySelectorAll(".slide"));
-
-// Pobranie elementu kontenera slajdów
 const slider = document.querySelector(".slider");
 
 // Funkcja do zmiany slajdu
 function changeSlide(index) {
-  // Wyliczenie wartości przesunięcia na podstawie indeksu slajdu
   const slideWidth = slides[0].offsetWidth;
   const displacement = -1 * slideWidth * index;
 
-  // Przesunięcie kontenera slajdów
+
   slider.style.transform = `translateX(${displacement}px)`;
 
-  // Aktualizacja indeksu bieżącego slajdu
+
   currentSlide = index;
 }
 
@@ -31,8 +26,6 @@ function autoSlide() {
 
   changeSlide(nextSlide);
 }
-
-// Ustawienie interwału do automatycznego przełączania slajdów
 setInterval(autoSlide, 5000);
 /*= ================== KONIEC SLIDERA =================== */
 
@@ -69,13 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Select the initial category
+
   const initialCategory = document.querySelector(
     '.category[data-category="pizza"]'
   );
   initialCategory.click();
 
-  // Add animation class to items in the initial category after page load
+
   const initialItems = document.querySelectorAll(
     '.item[data-category="pizza"]'
   );
@@ -103,7 +96,7 @@ $(document).ready(() => {
           scrollTop: target.offset().top,
         },
         800
-      ); // Czas trwania animacji w milisekundach
+      );
     }
   });
 });
@@ -112,24 +105,24 @@ $(document).ready(() => {
 /* ========= ANIMACJE POJAWIANIA SIĘ ELEMENTÓW =========== */
 document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
-    duration: 1000, // Czas trwania animacji (w milisekundach)
-    delay: 200, // Opóźnienie animacji (w milisekundach)
-    once: true, // Animacja zostanie odtworzona tylko raz
-    easing: "ease-out", // Krzywa animacji
+    duration: 1000, 
+    delay: 200, 
+    once: true, 
+    easing: "ease-out", 
   });
 
-  // Znajdujemy elementy z klasą "type-effect"
+
   const typeElements = document.querySelectorAll(".type-effect");
 
-  // Dla każdego elementu ustawiamy animację pisania się
-  typeElements.forEach((element) => {
-    element.innerHTML = ""; // Usuwamy oryginalną zawartość elementu
-    const text = element.dataset.aosText; // Pobieramy tekst z atrybutu "data-aos-text"
-    const delay = parseInt(element.dataset.aosDelay); // Pobieramy opóźnienie z atrybutu "data-aos-delay"
-    const duration = parseInt(element.dataset.aosDuration); // Pobieramy czas trwania z atrybutu "data-aos-duration"
-    let charIndex = 0; // Inicjalizujemy indeks znaku
 
-    // Funkcja, która dodaje pojedyncze litery do elementu z efektem pisania
+  typeElements.forEach((element) => {
+    element.innerHTML = ""; 
+    const text = element.dataset.aosText; 
+    const delay = parseInt(element.dataset.aosDelay); 
+    const duration = parseInt(element.dataset.aosDuration); 
+    let charIndex = 0; 
+
+    
     function typeWriter() {
       if (charIndex < text.length) {
         element.innerHTML += text.charAt(charIndex);
@@ -137,8 +130,6 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(typeWriter, duration);
       }
     }
-
-    // Wywołujemy funkcję pisania po opóźnieniu
     setTimeout(typeWriter, delay);
   });
 });

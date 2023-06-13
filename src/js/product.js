@@ -12,20 +12,20 @@ function hideIngredients() {
 
 document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
-    duration: 1000, // Czas trwania animacji (w milisekundach)
-    delay: 200, // Opóźnienie animacji (w milisekundach)
-    once: true, // Animacja zostanie odtworzona tylko raz
-    easing: "ease-out", // Krzywa animacji
+    duration: 1000, 
+    delay: 200, 
+    once: true, 
+    easing: "ease-out", 
   });
 
-  // Znajdujemy elementy z klasą "type-effect"
+ 
   const typeElements = document.querySelectorAll(".type-effect");
 
-  // Dla każdego elementu ustawiamy animację pisania się
+ 
   typeElements.forEach((element) => {
     const el = element;
-    el.innerHTML = ""; // Usuwamy oryginalną zawartość elementu
-    const text = el.dataset.aosText; // Pobieramy tekst z atrybutu "data-aos-text"
+    el.innerHTML = ""; 
+    const text = el.dataset.aosText; 
     const delay = parseInt(el.dataset.aosDelay, 10); 
     const duration = parseInt(el.dataset.aosDuration, 10); 
     let charIndex = 0; 

@@ -1,15 +1,15 @@
 .cart-overlay {
   background-color: rgba(0, 0, 0, 0.4);
   position: fixed;
-  top: 60px; /* Zmiana: odległość od góry strony (dostosuj wartość, jeśli potrzeba) */
+  top: 60px; 
   right: -100%;
   width: 500px;
-  bottom: 0; /* Zmiana: koszyk kończy się na dolnej granicy strony */
+  bottom: 0; 
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
   z-index: 9999;
-  overflow-y: auto; /* Zmiana: możliwość scrollowania, gdy zawartość przekracza wysokość koszyka */
+  overflow-y: auto;
   transition: all 0.3s ease-in-out;
 }
 .cart-overlay.active {
@@ -155,12 +155,12 @@
 }
 
 .cart-item {
-  margin-bottom: 10px; /* Dodany margines na dół */
-  padding-bottom: 10px; /* Dodany padding na dół */
-  border-bottom: 1px solid #fff; /* Opcjonalnie, dodaje dolną granicę dla zamówienia */
+  margin-bottom: 10px; 
+  padding-bottom: 10px; 
+  border-bottom: 1px solid #fff; 
 }
 
 .cart-item:last-child {
-  border-bottom: none; /* Usuwa dolną granicę dla ostatniego zamówienia */
+  border-bottom: none; 
 }
 /*================ KOSZYK KONIEc ============*/

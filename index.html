@@ -1,525 +1,471 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/e7dd2059d3.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="src/css/main.css" />
-    <link rel="stylesheet" href="src/css/cart.css" />
-    <title>Pizzeria Aniela</title>
-  </head>
 
-  <body>
-    <!-- HEADER POCZĄTEK -->
-    <header class="sticky-header">
-      <img class="logo" src="assets/images/aniela-logo2021.png" alt="logo" />
-      <nav>
-        <ul class="nav__links">
-          <li>
-            <a href="#aboutus" onclick="scrollToSection('#aboutus')">O nas</a>
-          </li>
-          <li><a href="#menu" onclick="scrollToSection('#menu')">Menu</a></li>
-          <li>
-            <a href="#contactus" onclick="scrollToSection('#contactus')"
-              >Kontakt</a
-            >
-          </li>
-        </ul>
-      </nav>
-      <button class="btn-cart btn-toggle-cart">Koszyk<span></span></button>
-    </header>
-    <!-- HEADER KONIEC -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/e7dd2059d3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="src/css/main.css" />
+  <link rel="stylesheet" href="src/css/cart.css" />
+  <title>Pizzeria Aniela</title>
+</head>
 
-    <!-- SLIDER POCZĄTEK -->
-    <div class="slider-container" data-aos="fade-down">
-      <div class="slider">
-        <div class="slide">
-          <img src="assets/images/pizza-slide-1.png" alt="Zdjęcie 1" />
-          <a
-            class="slide-button"
-            href="#menu"
-            onclick="scrollToSection('#menu')"
-            >Przejdź do menu</a
-          >
+<body>
+  <!-- HEADER POCZĄTEK -->
+  <header class="sticky-header">
+    <img class="logo" src="assets/images/aniela-logo2021.png" alt="logo" />
+    <nav>
+      <ul class="nav__links">
+        <li>
+          <a href="#aboutus" onclick="scrollToSection('#aboutus')">O nas</a>
+        </li>
+        <li><a href="#menu" onclick="scrollToSection('#menu')">Menu</a></li>
+        <li>
+          <a href="#contactus" onclick="scrollToSection('#contactus')">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="btn-cart btn-toggle-cart">Koszyk<span></span></button>
+  </header>
+  <!-- HEADER KONIEC -->
+
+  <!-- SLIDER POCZĄTEK -->
+  <div class="slider-container" data-aos="fade-down">
+    <div class="slider">
+      <div class="slide">
+        <img src="assets/images/pizza-slide-1.png" alt="Zdjęcie 1" />
+        <a class="slide-button" href="#menu" onclick="scrollToSection('#menu')">Przejdź do menu</a>
+      </div>
+      <div class="slide">
+        <img src="assets/images/pizza-slide-2.png" alt="Zdjęcie 2" />
+        <a class="slide-button" href="#menu" onclick="scrollToSection('#menu')">Przejdź do menu</a>
+      </div>
+      <div class="slide">
+        <img src="assets/images/pizza-slide-3.png" alt="Zdjęcie 3" />
+        <a class="slide-button" href="#menu" onclick="scrollToSection('#menu')">Przejdź do menu</a>
+      </div>
+    </div>
+  </div>
+  <!-- SLIDER KONIEC -->
+
+  <!--==================O NAS==================-->
+
+  <div class="about-section" id="aboutus">
+    <div class="about-image">
+      <div class="image-container">
+        <img src="assets/images/PIZZERIA ANIELA.png" alt="Zdjęcie naszej pizzerii" data-aos="fade-up" />
+      </div>
+    </div>
+    <div class="about-text" data-aos="fade-up">
+      <h2 class="about-heading">O nas</h2>
+      <p class="about-description">
+        Nasza pizzeria tworzy najlepsze jedzenie w Nowej Sarzynie już od 1999
+        roku. Jesteśmy dumni z naszej tradycji i pasji w przygotowywaniu
+        pysznych pizz, które zachwycają naszych klientów. Nasze dania są
+        przygotowywane ze świeżych składników i podawane z miłością do
+        włoskiej kuchni. Zapraszamy do odwiedzenia naszej pizzerii i
+        skosztowania naszych wyjątkowych smaków!
+      </p>
+    </div>
+  </div>
+
+  <!--==================O NAS KONIEC==================-->
+
+  <!--==================NASZE SPECJALNOSCI ==================-->
+  <section class="speciality" id="speciality" data-aos="fade-up">
+    <h1 class="heading">Nasze <span>specjalności</span></h1>
+    <div class="box-container">
+      <div class="box">
+        <img class="image" src="assets/images/pizza-cala.png" alt="" />
+        <div class="content">
+          <img src="assets/images/pizza-slice-white.png" alt="" />
+          <h3>Pyszna Pizza</h3>
+          <p>
+            Serwujemy najwyższej jakości pizzę, która bez wątpienia stawia nas
+            w czołówce. Naszeskładniki, cienkie i chrupiące ciasto oraz
+            niepowtarzalne połączenia smaków sprawiają, że nasza pizza jest
+            niezrównana i podbija podniebienia każdego gościa.
+          </p>
         </div>
-        <div class="slide">
-          <img src="assets/images/pizza-slide-2.png" alt="Zdjęcie 2" />
-          <a
-            class="slide-button"
-            href="#menu"
-            onclick="scrollToSection('#menu')"
-            >Przejdź do menu</a
-          >
+      </div>
+
+      <div class="box">
+        <img class="image" src="assets/images/fries-all.png" alt="" />
+        <div class="content">
+          <img class="icon" src="assets/images/fries-white.png" alt="" />
+          <h3>Frytki z Posypką</h3>
+          <p>
+            Nasze pyszne frytki z posypką są znane w całej gminie. Połączenie
+            naszych autorskich sosów ze świeża sałatką sprawia, że każdy kęs
+            to prawdziwa uczta dla podniebienia.
+          </p>
         </div>
-        <div class="slide">
-          <img src="assets/images/pizza-slide-3.png" alt="Zdjęcie 3" />
-          <a
-            class="slide-button"
-            href="#menu"
-            onclick="scrollToSection('#menu')"
-            >Przejdź do menu</a
-          >
+      </div>
+
+      <div class="box">
+        <img class="image" src="assets/images/kebab-all.png" alt="" />
+        <div class="content">
+          <img src="assets/images/kebab-white.png" alt="" />
+          <h3>Soczysty Kebab</h3>
+          <p>
+            Soczyste kawałki mięsa lub smaczne warzywa, zawinięte w cienki,
+            aromatyczny chlebek, stanowią idealne połączenie smaków, które
+            rozgrzewa i zaspokaja największy głód. Każdy kęs naszego kebaba to
+            podróż do krainy wyjątkowych aromatów i przyjemności kulinarnej.
+          </p>
+        </div>
+      </div>
+
+      <div class="box">
+        <img class="image" src="assets/images/salad-all.png" alt="" />
+        <div class="content">
+          <img class="icon" src="assets/images/salad-white.png" alt="" />
+          <h3>Świeże sałatki</h3>
+          <p>
+            Nasze pyszne sałatki to połączenie świeżych warzyw i wykwintnych
+            dodatków, które składają się na doskonały smak i zdrowe danie.
+            Każda sałatka jest starannie przygotowana, aby zaspokoić Twoje
+            podniebienie i dostarczyć Ci wartości odżywcze w jednym posiłku.
+          </p>
         </div>
       </div>
     </div>
-    <!-- SLIDER KONIEC -->
+  </section>
+  <!--==================NASZE SPECJALNOSCI KONIEC==================-->
 
-    <!--==================O NAS==================-->
-
-    <div class="about-section" id="aboutus">
-      <div class="about-image">
-        <div class="image-container">
-          <img
-            src="assets/images/PIZZERIA ANIELA.png"
-            alt="Zdjęcie naszej pizzerii"
-            data-aos="fade-up"
-          />
-        </div>
+  <!--================== KATEGORIE POCZĄTEK===================-->
+  <div class="menu-container" id="menu" data-aos="fade-up">
+    <div class="menu-title">Menu</div>
+    <div class="category-container">
+      <div class="category active" data-category="pizza">
+        <img src="assets/images/pizza-cala.png" alt="Pizza" />
+        <p>Pizza</p>
       </div>
-      <div class="about-text" data-aos="fade-up">
-        <h2 class="about-heading">O nas</h2>
-        <p class="about-description">
-          Nasza pizzeria tworzy najlepsze jedzenie w Nowej Sarzynie już od 1999
-          roku. Jesteśmy dumni z naszej tradycji i pasji w przygotowywaniu
-          pysznych pizz, które zachwycają naszych klientów. Nasze dania są
-          przygotowywane ze świeżych składników i podawane z miłością do
-          włoskiej kuchni. Zapraszamy do odwiedzenia naszej pizzerii i
-          skosztowania naszych wyjątkowych smaków!
+      <div class="category" data-category="frytki">
+        <img src="assets/images/fries-all.png" alt="Frytki" />
+        <p>Frytki</p>
+      </div>
+      <div class="category" data-category="kebab">
+        <img src="assets/images/kebab-all.png" alt="Kebab" />
+        <p>Kebab</p>
+      </div>
+      <div class="category" data-category="salatki">
+        <img src="assets/images/salad-all.png" alt="Sałatki" />
+        <p>Sałatki</p>
+      </div>
+    </div>
+    <!--================== KATEGORIE KONIEC===================-->
+
+    <!--================== POZYCJE Z MENU===================-->
+    <div class="item-container" data-aos="fade-up">
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-margarita.png" alt="Pizza 1" />
+        <h3>Pizza <span>Margarita</span></h3>
+        <p class="price">
+          Składniki: <span>sos, ser, oregano, pomidor</span>
+        </p>
+        <p>Cena: <span>17,00 - 54,00 zł</span></p>
+        <a href="product/pizza/margarita.html">Zamów</a>
+      </div>
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-siena.png" alt="Pizza 2" />
+        <h3>Pizza <span>Siena</span></h3>
+        <p>Składniki: <span>sos, ser, oregano, pieczarki</span></p>
+        <p class="price">Cena: <span>18,50 - 59,00 zł</span></p>
+        <a href="product/pizza/siena.html">Zamów</a>
+      </div>
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-selerno.png" alt="Pizza 3" />
+        <h3>Pizza <span>Selerno</span></h3>
+        <p>Składniki: <span>sos, ser, oregano, szynka</span></p>
+        <p class="price">Cena: <span>20,00 - 60,50 zł</span></p>
+        <a href="product/pizza/selerno.html">Zamów</a>
+      </div>
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-sienetta.png" alt="Pizza 4" />
+        <h3>Pizza <span>Sienetta</span></h3>
+        <p>Składniki: <span>sos, ser, oregano, szynka, pieczarki</span></p>
+        <p class="price">Cena: <span>21,50 - 65,50 zł</span></p>
+        <a href="product/pizza/sienetta.html">Zamów</a>
+      </div>
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-milano.png" alt="Pizza 5" />
+        <h3>Pizza <span>Milano</span></h3>
+        <p>
+          Składniki:
+          <span>sos, ser, oregano, szynka, pieczarki, kukurydza</span>
+        </p>
+        <p class="price">Cena: <span>23,00 - 70,50 zł</span></p>
+        <a href="product/pizza/milano.html">Zamów</a>
+      </div>
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-pancetta.png" alt="Pizza 6" />
+        <h3>Pizza <span>Pancetta</span></h3>
+        <p>
+          Składniki:
+          <span>sos, ser, oregano, 1/2 salami, 1/2 bekon, cebula, chilli</span>
+        </p>
+        <p class="price">Cena: <span>23,00 - 70,50 zł</span></p>
+        <a href="product/pizza/pancetta.html">Zamów</a>
+      </div>
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-pepperoni.png" alt="Pizza 7" />
+        <h3>Pizza <span>Pepperoni</span></h3>
+        <p>
+          Składniki: <span>sos, ser, oregano, salami, papryka, chilli</span>
+        </p>
+        <p class="price">Cena: <span>23,00 - 70,50 zł</span></p>
+        <a href="product/pizza/pepperoni.html">Zamów</a>
+      </div>
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-vulcano.png" alt="Pizza 8" />
+        <h3>Pizza <span>Vulcano</span></h3>
+        <p>
+          Składniki:
+          <span>sos, ser, oregano, salami, papryka, cebula, czosnek, chilli</span>
+        </p>
+        <p class="price">Cena: <span>26,00 - 85,00 zł</span></p>
+        <a href="product/pizza/vulcano.html">Zamów</a>
+      </div>
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-salami.png" alt="Pizza 9" />
+        <h3>Pizza <span>Salami</span></h3>
+        <p>Składniki: <span>sos, ser, oregano, salami</span></p>
+        <p class="price">Cena: <span>20,00 - 60,50 zł</span></p>
+        <a href="product/pizza/salami.html">Zamów</a>
+      </div>
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-romana.png" alt="Pizza 10" />
+        <h3>Pizza <span>Romana</span></h3>
+        <p>
+          Składniki:
+          <span>sos, ser, oregano, cebula, kukurydza, papryka, oliwki</span>
+        </p>
+        <p class="price">Cena: <span>23,00 - 74,00 zł</span></p>
+        <a href="product/pizza/romana.html">Zamów</a>
+      </div>
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-tunese.png" alt="Pizza 11" />
+        <h3>Pizza <span>Tunese</span></h3>
+        <p>Składniki: <span>sos, ser, oregano, tuńczyk</span></p>
+        <p class="price">Cena: <span>20,00 - 60,50 zł</span></p>
+        <a href="product/pizza/tunese.html">Zamów</a>
+      </div>
+      <div class="item" data-category="pizza">
+        <img src="assets/images/pizze/pizza-calabresina.png" alt="Pizza 12" />
+        <h3>Pizza <span>Calabresina</span></h3>
+        <p>
+          Składniki:
+          <span>sos, ser, oregano, tuńczyk, kukurydza, papryka</span>
+        </p>
+        <p class="price">Cena: <span>23,00 - 70,50 zł</span></p>
+        <a href="product/pizza/calabresina.html">Zamów</a>
+      </div>
+
+      <div class="item" data-category="frytki">
+        <img src="assets/images/frytki/frytki-zwykle.png" alt="Frytki 1" />
+        <h3>Frytki <span>klasyczne</span></h3>
+        <p>Składniki: <span>frytki, sól, sosy</span></p>
+        <p class="price">Cena: <span>8,00 - 12,00 zł</span></p>
+        <a href="/product/frytki/frytki-klasyczne.html">Zamów</a>
+      </div>
+      <div class="item" data-category="frytki">
+        <img src="assets/images/frytki/frytki-posypka.png" alt="Frytki 2" />
+        <h3>Frytki <span>z posypką</span></h3>
+        <p>
+          Składniki:
+          <span>frytki, pierś z kurczaka, sałata, sos czosnkowy</span>
+        </p>
+        <p class="price">Cena: <span>20,00 - 25,00</span></p>
+        <a href="/product/frytki/frytki-posypka.html">Zamów</a>
+      </div>
+      <div class="item" data-category="frytki">
+        <img src="assets/images/frytki/frytki-hot-wings.png" alt="Frytki 3" />
+        <h3>Frytki <span>z Hot Wings</span></h3>
+        <p>Składniki: <span>frytki, skrzydełka z kurczaka, sosy</span></p>
+        <p class="price">Cena: <span>25,00 zł</span></p>
+        <a href="/product/frytki/frytki-hotwings.html">Zamów</a>
+      </div>
+      <div class="item" data-category="frytki">
+        <img src="assets/images/frytki/frytki-kebab.png" alt="Frytki 4" />
+        <h3>Frytki <span>z Kebabem</span></h3>
+        <p>Składniki: <span>frytki, mięso kebab, sałatka, sosy</span></p>
+        <p class="price">Cena: <span>20,00 - 25,00 zł</span></p>
+        <a href="/product/frytki/frytki-kebab.html">Zamów</a>
+      </div>
+
+      <div class="item" data-category="kebab">
+        <img src="assets/images/kebaby/kebab-ciasto.png" alt="Kebab 1" />
+        <h3>Kebab <span>w cieście tureckim</span></h3>
+        <p>
+          Składniki:
+          <span>ciasto, mięso wołowe, lub drobiowe, surówki, sosy</span>
+        </p>
+        <p class="price">Cena: <span>15,00 - 18,00</span></p>
+        <a href="/product/kebab/kebab-ciasto.html">Zamów</a>
+      </div>
+      <div class="item" data-category="kebab">
+        <img src="assets/images/kebaby/kebab-tortilla.png" alt="Kebab 2" />
+        <h3>Kebab <span>w tortilli</span></h3>
+        <p>
+          Składniki:
+          <span>tortilla, mięso wołowe, lub drobiowe, surówki, sosy</span>
+        </p>
+        <p class="price">Cena: <span>15,50 - 18,50 zł</span></p>
+        <a href="/product/kebab/kebab-tortilla.html">Zamów</a>
+      </div>
+      <div class="item" data-category="kebab">
+        <img src="assets/images/kebaby/kebab-bulka.png" alt="Kebab 3" />
+        <h3>Kebab <span>w bułce</span></h3>
+        <p>
+          Składniki:
+          <span>bułka, mięso drobiowe z bukietem świeżych warzyw, sosy</span>
+        </p>
+        <p class="price">Cena: <span>20,00 - 25,00 zł</span></p>
+        <a href="product/kebab/kebab-bulka.html">Zamów</a>
+      </div>
+
+      <div class="item" data-category="salatki">
+        <img src="assets/images/salatki/salatka-tunczyk.png" alt="Sałatka 1" />
+        <h3>Sałatka <span>z tuńczykiem</span></h3>
+        <p>
+          Składniki:
+          <span>sałata lodowa, tuńczyk, pomidor, ogórek, kukurydza, grzanki
+            czosnkowe, sos vinegrette, sos tysiąca wysp</span>
+        </p>
+        <p class="price">Cena: <span>22,00 zł</span></p>
+        <a href="/product/salatki/salatka-tunczyk.html">Zamów</a>
+      </div>
+      <div class="item" data-category="salatki">
+        <img src="assets/images/salatki/salatka-grecka.png" alt="Sałatka 2" />
+        <h3>Sałatka <span>grecka</span></h3>
+        <p>
+          Składniki:
+          <span>sałata lodowa, ser feta, papryka, pomidor, ogórek, oliwki,
+            czerwona cebula, sos vinegrette</span>
+        </p>
+        <p class="price">Cena: <span>18,00 zł</span></p>
+        <a href="/product/salatki/salatka-grecka.html">Zamów</a>
+      </div>
+      <div class="item" data-category="salatki">
+        <img src="assets/images/salatki/salatka-kurczak.png" alt="Sałatka 3" />
+        <h3>Sałatka <span>z kurczakiem</span></h3>
+        <p>
+          Składniki:
+          <span>sałata lodowa, grilowany kurczak, pomidor, czerwona cebula,
+            ogórek, papryka, grzanki czosnkowe, sos vinegrette, sos
+            czosnkowy</span>
+        </p>
+        <p class="price">Cena: <span>22,00 zł</span></p>
+        <a href="/product/salatki/salatka-kurczak.html">Zamów</a>
+      </div>
+    </div>
+  </div>
+  <!--================== POZYCJE Z MENU KONIEC====================-->
+
+  <div class="contact-section" id="contactus">
+    <div class="contact-image">
+      <div class="image-container">
+        <img src="assets/images/flota.jpg" alt="Zdjęcie naszej floty" data-aos="fade-in" />
+      </div>
+    </div>
+    <div class="contact-text" data-aos="fade-up">
+      <h2 class="contact-heading">Głodny? <span>Nie czekaj- dzwoń!</span></h2>
+      <h1>Numery telefonu:</h1>
+      <p class="contact-description">- 17 24 11 464</p>
+      <p class="contact-description">- 733 452 317</p>
+      <p class="contact-description">- 17 240 20 55</p>
+      <h2 class="contact-heading">
+        A może wpadniesz do nas? <span>Zapraszamy do naszego lokalu!</span>
+      </h2>
+      <p class="contact-description">ul. Braci Śniadeckich 2, Nowa Sarzyna</p>
+      <h1>Godziny otwarcia:</h1>
+      <p class="contact-description">Codziennie: 13:00 - 22:00</p>
+    </div>
+  </div>
+  <div class="cart-overlay">
+    <div class="cart">
+      <div class="cart-header">
+        <h2>Koszyk</h2>
+        <button class="cart-header__close-btn btn-toggle-cart">X</button>
+      </div>
+      <div class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Razem:</span><span class="cart-total__value"></span>
+        </div>
+        <!-- <button class="close-cart-btn btn-toggle-cart">Zamknij</button> -->
+      </div>
+    </div>
+  </div>
+  <template id="cart-item-template">
+    <div class="cart-item">
+      <div class="cart-item__img">
+        <img src="" alt="" />
+      </div>
+      <div class="cart-item__details">
+        <h3 class="cart-item__title"></h3>
+        <span>
+          Rozmiar:
+          <span class="cart-item__size"></span>
+          zł
+        </span>
+      </div>
+      <div class="cart-item__price"></div>
+      <div class="cart-item__remove" data-line-item-id>
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </div>
+    </div>
+  </template>
+  <!--================== FOOTER====================-->
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <h3>Pizzeria<span>Aniela</span></h3>
+      <p class="footer-company-name">Artur © 2023</p>
+    </div>
+
+    <div class="footer-center" id="contactus">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>ul. Braci Śniadeckich 2</span> Nowa Sarzyna</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>17 24 11 464</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p>
+          <a href="mailto:pizzeria-aniela@aniela.com">pizzeria-aniela@aniela.com</a>
         </p>
       </div>
     </div>
 
-    <!--==================O NAS KONIEC==================-->
+    <div class="footer-right">
+      <p class="footer-company-about">
+        <span>Jesteśmy z wami już od 1999!</span>
+        Nasza pizzeria rozpieszcza wasze podniebienia od wielu wielu lat!
+        Jeśli nie miałeś okazji spróbować naszych dań to własnie przyszedł na
+        to czas! Nie czekaj i zamów już teraz!
+      </p>
 
-    <!--==================NASZE SPECJALNOSCI ==================-->
-    <section class="speciality" id="speciality" data-aos="fade-up">
-      <h1 class="heading">Nasze <span>specjalności</span></h1>
-      <div class="box-container">
-        <div class="box">
-          <img class="image" src="assets/images/pizza-cala.png" alt="" />
-          <div class="content">
-            <img src="assets/images/pizza-slice-white.png" alt="" />
-            <h3>Pyszna Pizza</h3>
-            <p>
-              Serwujemy najwyższej jakości pizzę, która bez wątpienia stawia nas
-              w czołówce. Naszeskładniki, cienkie i chrupiące ciasto oraz
-              niepowtarzalne połączenia smaków sprawiają, że nasza pizza jest
-              niezrównana i podbija podniebienia każdego gościa.
-            </p>
-          </div>
-        </div>
-
-        <div class="box">
-          <img class="image" src="assets/images/fries-all.png" alt="" />
-          <div class="content">
-            <img class="icon" src="assets/images/fries-white.png" alt="" />
-            <h3>Frytki z Posypką</h3>
-            <p>
-              Nasze pyszne frytki z posypką są znane w całej gminie. Połączenie
-              naszych autorskich sosów ze świeża sałatką sprawia, że każdy kęs
-              to prawdziwa uczta dla podniebienia.
-            </p>
-          </div>
-        </div>
-
-        <div class="box">
-          <img class="image" src="assets/images/kebab-all.png" alt="" />
-          <div class="content">
-            <img src="assets/images/kebab-white.png" alt="" />
-            <h3>Soczysty Kebab</h3>
-            <p>
-              Soczyste kawałki mięsa lub smaczne warzywa, zawinięte w cienki,
-              aromatyczny chlebek, stanowią idealne połączenie smaków, które
-              rozgrzewa i zaspokaja największy głód. Każdy kęs naszego kebaba to
-              podróż do krainy wyjątkowych aromatów i przyjemności kulinarnej.
-            </p>
-          </div>
-        </div>
-
-        <div class="box">
-          <img class="image" src="assets/images/salad-all.png" alt="" />
-          <div class="content">
-            <img class="icon" src="assets/images/salad-white.png" alt="" />
-            <h3>Świeże sałatki</h3>
-            <p>
-              Nasze pyszne sałatki to połączenie świeżych warzyw i wykwintnych
-              dodatków, które składają się na doskonały smak i zdrowe danie.
-              Każda sałatka jest starannie przygotowana, aby zaspokoić Twoje
-              podniebienie i dostarczyć Ci wartości odżywcze w jednym posiłku.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!--==================NASZE SPECJALNOSCI KONIEC==================-->
-
-    <!--================== KATEGORIE POCZĄTEK===================-->
-    <div class="menu-container" id="menu" data-aos="fade-up">
-      <div class="menu-title">Menu</div>
-      <div class="category-container">
-        <div class="category active" data-category="pizza">
-          <img src="assets/images/pizza-cala.png" alt="Pizza" />
-          <p>Pizza</p>
-        </div>
-        <div class="category" data-category="frytki">
-          <img src="assets/images/fries-all.png" alt="Frytki" />
-          <p>Frytki</p>
-        </div>
-        <div class="category" data-category="kebab">
-          <img src="assets/images/kebab-all.png" alt="Kebab" />
-          <p>Kebab</p>
-        </div>
-        <div class="category" data-category="salatki">
-          <img src="assets/images/salad-all.png" alt="Sałatki" />
-          <p>Sałatki</p>
-        </div>
-      </div>
-      <!--================== KATEGORIE KONIEC===================-->
-
-      <!--================== POZYCJE Z MENU===================-->
-      <div class="item-container" data-aos="fade-up">
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-margarita.png" alt="Pizza 1" />
-          <h3>Pizza <span>Margarita</span></h3>
-          <p class="price">
-            Składniki: <span>sos, ser, oregano, pomidor</span>
-          </p>
-          <p>Cena: <span>17,00 - 54,00 zł</span></p>
-          <a href="product/pizza/margarita.html">Zamów</a>
-        </div>
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-siena.png" alt="Pizza 2" />
-          <h3>Pizza <span>Siena</span></h3>
-          <p>Składniki: <span>sos, ser, oregano, pieczarki</span></p>
-          <p class="price">Cena: <span>18,50 - 59,00 zł</span></p>
-          <a href="margarita">Zamów</a>
-        </div>
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-selerno.png" alt="Pizza 3" />
-          <h3>Pizza <span>Selerno</span></h3>
-          <p>Składniki: <span>sos, ser, oregano, szynka</span></p>
-          <p class="price">Cena: <span>20,00 - 60,50 zł</span></p>
-          <a href="margarita">Zamów</a>
-        </div>
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-sienetta.png" alt="Pizza 4" />
-          <h3>Pizza <span>Sienetta</span></h3>
-          <p>Składniki: <span>sos, ser, oregano, szynka, pieczarki</span></p>
-          <p class="price">Cena: <span>21,50 - 65,50 zł</span></p>
-          <a href="margarita">Zamów</a>
-        </div>
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-milano.png" alt="Pizza 5" />
-          <h3>Pizza <span>Milano</span></h3>
-          <p>
-            Składniki:
-            <span>sos, ser, oregano, szynka, pieczarki, kukurydza</span>
-          </p>
-          <p class="price">Cena: <span>23,00 - 70,50 zł</span></p>
-          <a href="margarita">Zamów</a>
-        </div>
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-pancetta.png" alt="Pizza 6" />
-          <h3>Pizza <span>Pancetta</span></h3>
-          <p>
-            Składniki:
-            <span
-              >sos, ser, oregano, 1/2 salami, 1/2 bekon, cebula, chilli</span
-            >
-          </p>
-          <p class="price">Cena: <span>23,00 - 70,50 zł</span></p>
-          <a href="margarita">Zamów</a>
-        </div>
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-pepperoni.png" alt="Pizza 7" />
-          <h3>Pizza <span>Pepperoni</span></h3>
-          <p>
-            Składniki: <span>sos, ser, oregano, salami, papryka, chilli</span>
-          </p>
-          <p class="price">Cena: <span>23,00 - 70,50 zł</span></p>
-          <a href="margarita">Zamów</a>
-        </div>
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-vulcano.png" alt="Pizza 8" />
-          <h3>Pizza <span>Vulcano</span></h3>
-          <p>
-            Składniki:
-            <span
-              >sos, ser, oregano, salami, papryka, cebula, czosnek, chilli</span
-            >
-          </p>
-          <p class="price">Cena: <span>26,00 - 85,00 zł</span></p>
-          <a href="margarita">Zamów</a>
-        </div>
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-salami.png" alt="Pizza 9" />
-          <h3>Pizza <span>Salami</span></h3>
-          <p>Składniki: <span>sos, ser, oregano, salami</span></p>
-          <p class="price">Cena: <span>20,00 - 60,50 zł</span></p>
-          <a href="margarita">Zamów</a>
-        </div>
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-romana.png" alt="Pizza 10" />
-          <h3>Pizza <span>Romana</span></h3>
-          <p>
-            Składniki:
-            <span>sos, ser, oregano, cebula, kukurydza, papryka, oliwki</span>
-          </p>
-          <p class="price">Cena: <span>23,00 - 74,00 zł</span></p>
-          <a href="margarita">Zamów</a>
-        </div>
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-tunese.png" alt="Pizza 11" />
-          <h3>Pizza <span>Tunese</span></h3>
-          <p>Składniki: <span>sos, ser, oregano, tuńczyk</span></p>
-          <p class="price">Cena: <span>20,00 - 60,50 zł</span></p>
-          <a href="margarita">Zamów</a>
-        </div>
-        <div class="item" data-category="pizza">
-          <img src="assets/images/pizze/pizza-calabresina.png" alt="Pizza 12" />
-          <h3>Pizza <span>Calabresina</span></h3>
-          <p>
-            Składniki:
-            <span>sos, ser, oregano, tuńczyk, kukurydza, papryka</span>
-          </p>
-          <p class="price">Cena: <span>23,00 - 70,50 zł</span></p>
-          <a href="margarita">Zamów</a>
-        </div>
-
-        <div class="item" data-category="frytki">
-          <img src="assets/images/frytki/frytki-zwykle.png" alt="Frytki 1" />
-          <h3>Frytki <span>klasyczne</span></h3>
-          <p>Składniki: <span>frytki, sól, sosy</span></p>
-          <p class="price">Cena: <span>8,00 - 12,00 zł</span></p>
-          <a href="/fries">Zamów</a>
-        </div>
-        <div class="item" data-category="frytki">
-          <img src="assets/images/frytki/frytki-posypka.png" alt="Frytki 2" />
-          <h3>Frytki <span>z posypką</span></h3>
-          <p>
-            Składniki:
-            <span>frytki, pierś z kurczaka, sałata, sos czosnkowy</span>
-          </p>
-          <p class="price">Cena: <span>20,00 - 25,00</span></p>
-          <a href="/fries">Zamów</a>
-        </div>
-        <div class="item" data-category="frytki">
-          <img src="assets/images/frytki/frytki-hot-wings.png" alt="Frytki 3" />
-          <h3>Frytki <span>z Hot Wings</span></h3>
-          <p>Składniki: <span>frytki, skrzydełka z kurczaka, sosy</span></p>
-          <p class="price">Cena: <span>25,00 zł</span></p>
-          <a href="/fries">Zamów</a>
-        </div>
-        <div class="item" data-category="frytki">
-          <img src="assets/images/frytki/frytki-kebab.png" alt="Frytki 4" />
-          <h3>Frytki <span>z Kebabem</span></h3>
-          <p>Składniki: <span>frytki, skrzydełka z kurczaka, sosy</span></p>
-          <p class="price">Cena: <span>20,00 - 25,00 zł</span></p>
-          <a href="/fries">Zamów</a>
-        </div>
-
-        <div class="item" data-category="kebab">
-          <img src="assets/images/kebaby/kebab-ciasto.png" alt="Kebab 1" />
-          <h3>Kebab <span>w cieście tureckim</span></h3>
-          <p>
-            Składniki:
-            <span>ciasto, mięso wołowe, lub drobiowe, surówki, sosy</span>
-          </p>
-          <p class="price">Cena: <span>15,00 - 18,00</span></p>
-          <a href="/kebab">Zamów</a>
-        </div>
-        <div class="item" data-category="kebab">
-          <img src="assets/images/kebaby/kebab-tortilla.png" alt="Kebab 2" />
-          <h3>Kebab <span>w tortilli</span></h3>
-          <p>
-            Składniki:
-            <span>tortilla, mięso wołowe, lub drobiowe, surówki, sosy</span>
-          </p>
-          <p class="price">Cena: <span>15,50 - 18,50 zł</span></p>
-          <a href="/kebab">Zamów</a>
-        </div>
-        <div class="item" data-category="kebab">
-          <img src="assets/images/kebaby/kebab-bulka.png" alt="Kebab 3" />
-          <h3>Kebab <span>w bułce</span></h3>
-          <p>
-            Składniki:
-            <span>bułka, mięso drobiowe z bukietem świeżych warzyw, sosy</span>
-          </p>
-          <p class="price">Cena: <span>20,00 - 25,00 zł</span></p>
-          <a href="/kebab">Zamów</a>
-        </div>
-
-        <div class="item" data-category="salatki">
-          <img
-            src="assets/images/salatki/salatka-tunczyk.png"
-            alt="Sałatka 1"
-          />
-          <h3>Sałatka <span>z tuńczykiem</span></h3>
-          <p>
-            Składniki:
-            <span
-              >sałata lodowa, tuńczyk, pomidor, ogórek, kukurydza, grzanki
-              czosnkowe, sos vinegrette, sos tysiąca wysp</span
-            >
-          </p>
-          <p class="price">Cena: <span>22,00 zł</span></p>
-          <a href="/salads/greek">Zamów</a>
-        </div>
-        <div class="item" data-category="salatki">
-          <img src="assets/images/salatki/salatka-grecka.png" alt="Sałatka 2" />
-          <h3>Sałatka <span>grecka</span></h3>
-          <p>
-            Składniki:
-            <span
-              >sałata lodowa, ser feta, papryka, pomidor, ogórek, oliwki,
-              czerwona cebula, sos vinegrette</span
-            >
-          </p>
-          <p class="price">Cena: <span>18,00 zł</span></p>
-          <a href="/salads/greek">Zamów</a>
-        </div>
-        <div class="item" data-category="salatki">
-          <img
-            src="assets/images/salatki/salatka-kurczak.png"
-            alt="Sałatka 3"
-          />
-          <h3>Sałatka <span>z kurczakiem</span></h3>
-          <p>
-            Składniki:
-            <span
-              >sałata lodowa, grilowany kurczak, pomidor, czerwona cebula,
-              ogórek, papryka, grzanki czosnkowe, sos vinegrette, sos
-              czosnkowy</span
-            >
-          </p>
-          <p class="price">Cena: <span>22,00 zł</span></p>
-          <a href="/salads/greek">Zamów</a>
-        </div>
+      <div class="footer-icons">
+        <a href="https://www.facebook.com/profile.php?id=100063614171370"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100063614171370"><i class="fa fa-instagram"></i></a>
       </div>
     </div>
-    <!--================== POZYCJE Z MENU KONIEC====================-->
+  </footer>
+  <!--================== FOOTER KONIEC ====================-->
 
-    <div class="contact-section" id="contactus">
-      <div class="contact-image">
-        <div class="image-container">
-          <img
-            src="assets/images/flota.jpg"
-            alt="Zdjęcie naszej floty"
-            data-aos="fade-in"
-          />
-        </div>
-      </div>
-      <div class="contact-text" data-aos="fade-up">
-        <h2 class="contact-heading">Głodny? <span>Nie czekaj- dzwoń!</span></h2>
-        <h1>Numery telefonu:</h1>
-        <p class="contact-description">- 17 24 11 464</p>
-        <p class="contact-description">- 733 452 317</p>
-        <p class="contact-description">- 17 240 20 55</p>
-        <h2 class="contact-heading">
-          A może wpadniesz do nas? <span>Zapraszamy do naszego lokalu!</span>
-        </h2>
-        <p class="contact-description">ul. Braci Śniadeckich 2, Nowa Sarzyna</p>
-        <h1>Godziny otwarcia:</h1>
-        <p class="contact-description">Codziennie: 13:00 - 22:00</p>
-      </div>
-    </div>
-    <div class="cart-overlay">
-      <div class="cart">
-        <div class="cart-header">
-          <h2>Koszyk</h2>
-          <button class="cart-header__close-btn btn-toggle-cart">X</button>
-        </div>
-        <div class="cart-items"></div>
-        <div class="cart-footer">
-          <div class="cart-total">
-            <span>Razem:</span><span class="cart-total__value"></span>
-          </div>
-          <!-- <button class="close-cart-btn btn-toggle-cart">Zamknij</button> -->
-        </div>
-      </div>
-    </div>
-    <template id="cart-item-template">
-      <div class="cart-item">
-        <div class="cart-item__img">
-          <img src="" alt="" />
-        </div>
-        <div class="cart-item__details">
-          <h3 class="cart-item__title"></h3>
-          <span>
-            Rozmiar:
-            <span class="cart-item__size"></span>
-            zł
-          </span>
-        </div>
-        <div class="cart-item__price"></div>
-        <div class="cart-item__remove" data-line-item-id>
-          <i class="fa fa-trash" aria-hidden="true"></i>
-        </div>
-      </div>
-    </template>
-    <!--================== FOOTER====================-->
-    <footer class="footer-distributed">
-      <div class="footer-left">
-        <h3>Pizzeria<span>Aniela</span></h3>
-        <p class="footer-company-name">Artur © 2023</p>
-      </div>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="src/js/main.js"></script>
+  <script src="src/js/cart.js"></script>
+</body>
 
-      <div class="footer-center" id="contactus">
-        <div>
-          <i class="fa fa-map-marker"></i>
-          <p><span>ul. Braci Śniadeckich 2</span> Nowa Sarzyna</p>
-        </div>
-
-        <div>
-          <i class="fa fa-phone"></i>
-          <p>17 24 11 464</p>
-        </div>
-
-        <div>
-          <i class="fa fa-envelope"></i>
-          <p>
-            <a href="mailto:pizzeria-aniela@aniela.com"
-              >pizzeria-aniela@aniela.com</a
-            >
-          </p>
-        </div>
-      </div>
-
-      <div class="footer-right">
-        <p class="footer-company-about">
-          <span>Jesteśmy z wami już od 1999!</span>
-          Nasza pizzeria rozpieszcza wasze podniebienia od wielu wielu lat!
-          Jeśli nie miałeś okazji spróbować naszych dań to własnie przyszedł na
-          to czas! Nie czekaj i zamów już teraz!
-        </p>
-
-        <div class="footer-icons">
-          <a href="https://www.facebook.com/profile.php?id=100063614171370"
-            ><i class="fa fa-facebook"></i
-          ></a>
-          <a href="https://www.facebook.com/profile.php?id=100063614171370"
-            ><i class="fa fa-instagram"></i
-          ></a>
-        </div>
-      </div>
-    </footer>
-    <!--================== FOOTER KONIEC ====================-->
-
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="src/js/main.js"></script>
-    <script src="src/js/cart.js"></script>
-  </body>
 </html>
