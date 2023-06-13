@@ -61,6 +61,7 @@
   flex-direction: column;
   margin-bottom: 20px;
   margin-top: 8px;
+  font-family: 'Montserrat', sans-serif;
 }
 .cart-items:not(:empty) {
   flex-grow: 1;
@@ -78,6 +79,7 @@
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+  font-family: 'Montserrat', sans-serif;
 }
 .cart-empty.active {
   display: flex;
@@ -120,11 +122,14 @@
 .cart-item__remove i {
   pointer-events: none;
 }
+
 .cart-total {
   display: flex;
   justify-content: space-between;
-  color: #fff;
+  color: rgba(255, 165, 0, 1);
   margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+  border-bottom: #fff;
 }
 .cart-item p {
   margin-bottom: 10px;
