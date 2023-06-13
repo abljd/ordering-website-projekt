@@ -79,6 +79,9 @@ button {
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
+button * {
+  background-color: rgba(255, 165, 0, 1);
+}
 button:hover {
   background-color: rgba(255, 165, 0, 0.8);
 }
@@ -102,7 +105,9 @@ button:hover {
   border: 2px solid rgba(255, 165, 0, 1);
   border-radius: 15px;
 }
-
+.img-for-cart {
+  display: none;
+}
 .right-box {
   display: flex;
   flex-direction: column;
@@ -421,82 +426,3 @@ textarea#komentarz:focus {
 /* ============== FOOTER KONIEC  ============*/
 
 /*================ KOSZYK POCZATEK ============*/
-.cart-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  top: 60px; /* Zmiana: odległość od góry strony (dostosuj wartość, jeśli potrzeba) */
-  right: 0;
-  width: 300px;
-  bottom: 0; /* Zmiana: koszyk kończy się na dolnej granicy strony */
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  z-index: 9999;
-  overflow-y: auto; /* Zmiana: możliwość scrollowania, gdy zawartość przekracza wysokość koszyka */
-}
-.cart {
-  background-color: #24252a;
-  border-radius: 8px;
-  padding: 20px;
-  width: 500px;
-  max-width: 90%;
-  max-height: 90%;
-  overflow-y: auto;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  margin-top: 10px;
-  margin-right: 10px;
-}
-
-.cart h2 {
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin: 0;
-  color: rgba(255, 165, 0, 1);
-  font-family: "Montserrat", sans-serif;
-  margin-bottom: 5px;
-  border-bottom: 1px solid rgba(255, 165, 0, 1);
-}
-
-.cart-items {
-  margin-bottom: 20px;
-}
-
-.cart-item p {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-  font-family: "Montserrat", sans-serif;
-  color: #fff;
-}
-
-.cart-item:last-child {
-  border-bottom: none;
-}
-
-.cart-item p {
-  margin: 0;
-}
-
-.close-cart-btn {
-  padding: 9px 25px;
-  background-color: rgba(255, 165, 0, 1);
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-.close-cart-btn:hover {
-  background-color: rgba(255, 165, 0, 0.8);
-}
-
-.cart-item {
-  margin-bottom: 10px; /* Dodany margines na dół */
-  padding-bottom: 10px; /* Dodany padding na dół */
-  border-bottom: 1px solid #fff; /* Opcjonalnie, dodaje dolną granicę dla zamówienia */
-}
-
-.cart-item:last-child {
-  border-bottom: none; /* Usuwa dolną granicę dla ostatniego zamówienia */
-}
-/*================ KOSZYK KONIEc ============*/

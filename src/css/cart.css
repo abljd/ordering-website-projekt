@@ -1,0 +1,166 @@
+.cart-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 60px; /* Zmiana: odległość od góry strony (dostosuj wartość, jeśli potrzeba) */
+  right: -100%;
+  width: 500px;
+  bottom: 0; /* Zmiana: koszyk kończy się na dolnej granicy strony */
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  z-index: 9999;
+  overflow-y: auto; /* Zmiana: możliwość scrollowania, gdy zawartość przekracza wysokość koszyka */
+  transition: all 0.3s ease-in-out;
+}
+.cart-overlay.active {
+  right: 0;
+}
+.cart {
+  display: flex;
+  flex-direction: column;
+  background-color: #24252a;
+  border-radius: 8px;
+  padding: 20px;
+  width: 500px;
+  max-width: 90%;
+  max-height: calc(100% - 20px);
+  height: calc(100% - 20px);
+  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.cart h2 {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  color: rgba(255, 165, 0, 1);
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 165, 0, 1);
+}
+.cart-header {
+  position: relative;
+}
+.cart-header .cart-header__close-btn {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  border-radius: 50%;
+}
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+.cart-items:not(:empty) {
+  flex-grow: 1;
+}
+.cart-overlay.cart--empty .cart-empty {
+  display: flex;
+}
+.cart-overlay.cart--empty .cart-total {
+  display: none;
+}
+.cart-empty {
+  display: none;
+  flex-direction: column;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.cart-empty.active {
+  display: flex;
+}
+.cart-empty h3 {
+  margin-bottom: 8px;
+}
+.cart-item {
+  position: relative;
+  display: flex;
+  color: #fff;
+  column-gap: 8px;
+}
+.cart-item__details {
+  display: flex;
+  flex-direction: column;
+}
+.cart-item__price {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+}
+.cart-item__img img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.cart-item__size {
+  text-transform: capitalize;
+}
+.cart-item__remove {
+  position: absolute;
+  cursor: pointer;
+  right: 0;
+  bottom: 16px;
+}
+.cart-item__remove i {
+  pointer-events: none;
+}
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.cart-item p {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.cart-item p {
+  margin: 0;
+}
+
+.close-cart-btn {
+  padding: 9px 25px;
+  background-color: rgba(255, 165, 0, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.close-cart-btn:hover {
+  background-color: rgba(255, 165, 0, 0.8);
+}
+
+.cart-item {
+  margin-bottom: 10px; /* Dodany margines na dół */
+  padding-bottom: 10px; /* Dodany padding na dół */
+  border-bottom: 1px solid #fff; /* Opcjonalnie, dodaje dolną granicę dla zamówienia */
+}
+
+.cart-item:last-child {
+  border-bottom: none; /* Usuwa dolną granicę dla ostatniego zamówienia */
+}
+/*================ KOSZYK KONIEc ============*/
