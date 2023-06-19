@@ -85,15 +85,58 @@
                         <label class="option-name">Lista składników:</label>
                     </div>
                     <label>
-                        <input type="checkbox" name="skladnik" value="skladnik1, 2" />
-                        Składnik 1 (2,00 zł)
+                        <input type="checkbox" name="skladnik" value="Szynka, 2" />
+                        Szynka (2,00 zł)
                     </label>
-                    <br />
                     <label>
-                        <input type="checkbox" name="skladnik2" value="skladnik2, 2" />
-                        Składnik 2 (2,00 zł)
+                        <input type="checkbox" name="skladnik2" value="Kurczak, 2" />
+                        Kurczak (2,00 zł)
                     </label>
-                    <br />
+                    <br>
+                    <label>
+                        <input type="checkbox" name="skladnik3" value="Pieczarki, 2" />
+                        Pieczarki (2,00 zł)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skladnik4" value="Cebula, 2" />
+                        Cebula (2,00 zł)
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="skladnik5" value="Papryka, 2" />
+                        Papryka (2,00 zł)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skladnik6" value="Oliwki, 2" />
+                        Oliwki (2,00 zł)
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="skladnik7" value="Ananas, 2" />
+                        Ananas (2,00 zł)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skladnik8" value="Kukurydza, 2" />
+                        Kukurydza (2,00 zł)
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="skladnik9" value="Rukola, 2" />
+                        Rukola (2,00 zł)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skladnik10" value="Ser Feta, 2" />
+                        Ser Feta (2,00 zł)
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="skladnik11" value="Bekon, 2" />
+                        Bekon (2,00 zł)
+                    </label>
+                    <label>
+                        <input type="checkbox" name="skladnik12" value="Jalapeno, 2" />
+                        Jalapeno (2,00 zł)
+                    </label>
                 </div>
 
                 <div class="sauce-list">
@@ -101,15 +144,15 @@
                         <label class="option-name">Wybierz sos:</label>
                     </div>
                     <label>
-                        <input type="checkbox" name="sos_k" value="ketchup, 1.5" />
+                        <input type="checkbox" name="sos_k" value="Ketchup, 1.5" />
                         Ketchup (1,50 zł)
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="sos_cz" value="czosnkowy, 1.5" />
+                        <input type="checkbox" name="sos_cz" value="Czosnkowy, 1.5" />
                         Czosnkowy (1,50 zł) </label><br />
                     <label>
-                        <input type="checkbox" name="sos_os" value="ostry, 1.5" />
+                        <input type="checkbox" name="sos_os" value="Ostry, 1.5" />
                         Ostry (1,50 zł)
                     </label>
                     <br />
@@ -136,15 +179,12 @@
                 <button class="cart-header__close-btn btn-toggle-cart">X</button>
             </div>
             <div class="cart-items"></div>
-            <div class="cart-empty">
-                <h3>Twój koszyk jest pusty</h3>
-                <button><a href="/">Zobacz nasze menu</a></button>
-            </div>
             <div class="cart-footer">
                 <div class="cart-total">
                     <span>Razem:</span><span class="cart-total__value"></span>
                 </div>
-                <!-- <button class="close-cart-btn btn-toggle-cart">Zamknij</button> -->
+                <button class="close-cart-btn btn-toggle-cart">Zamknij</button>
+                <a href="../../finish-order.html" class="close-cart-btn">Złóż zamówienie</a>
             </div>
         </div>
     </div>
@@ -160,6 +200,9 @@
                     <span class="cart-item__size"></span>
                     zł
                 </span>
+                <div class="cart-item__comment">
+
+                </div>
             </div>
             <div class="cart-item__price"></div>
             <div class="cart-item__remove" data-line-item-id>

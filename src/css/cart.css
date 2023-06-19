@@ -168,4 +168,8 @@
 .cart-item:last-child {
   border-bottom: none; 
 }
+
+.cart-item__additionals{
+  color: rgba(255, 165, 0, 1);
+}
 /*================ KOSZYK KONIEc ============*/

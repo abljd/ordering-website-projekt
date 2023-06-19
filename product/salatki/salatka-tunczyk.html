@@ -51,15 +51,15 @@
                         <label class="option-name">Wybierz sos:</label>
                     </div>
                     <label>
-                        <input type="checkbox" name="sos_k" value="ketchup, 1.5" />
+                        <input type="checkbox" name="sos_k" value="Ketchup, 1.5" />
                         Ketchup (1,50 zł)
                     </label>
                     <br />
                     <label>
-                        <input type="checkbox" name="sos_cz" value="czosnkowy, 1.5" />
+                        <input type="checkbox" name="sos_cz" value="Czosnkowy, 1.5" />
                         Czosnkowy (1,50 zł) </label><br />
                     <label>
-                        <input type="checkbox" name="sos_os" value="ostry, 1.5" />
+                        <input type="checkbox" name="sos_os" value="Ostry, 1.5" />
                         Ostry (1,50 zł)
                     </label>
                     <br />
@@ -78,7 +78,6 @@
             </form>
         </div>
     </div>
-
     <div class="cart-overlay">
         <div class="cart">
             <div class="cart-header">
@@ -86,15 +85,12 @@
                 <button class="cart-header__close-btn btn-toggle-cart">X</button>
             </div>
             <div class="cart-items"></div>
-            <div class="cart-empty">
-                <h3>Twój koszyk jest pusty</h3>
-                <button><a href="/">Zobacz nasze menu</a></button>
-            </div>
             <div class="cart-footer">
                 <div class="cart-total">
                     <span>Razem:</span><span class="cart-total__value"></span>
                 </div>
-                <!-- <button class="close-cart-btn btn-toggle-cart">Zamknij</button> -->
+                <button class="close-cart-btn btn-toggle-cart">Zamknij</button>
+                <a href="../../finish-order.html" class="close-cart-btn">Złóż zamówienie</a>
             </div>
         </div>
     </div>
@@ -110,6 +106,9 @@
                     <span class="cart-item__size"></span>
                     zł
                 </span>
+                <div class="cart-item__comment">
+
+                </div>
             </div>
             <div class="cart-item__price"></div>
             <div class="cart-item__remove" data-line-item-id>

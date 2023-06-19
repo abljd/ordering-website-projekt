@@ -1,0 +1,210 @@
+
+form {
+    width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 2px solid rgba(255,165,0,1);
+    border-radius: 4px;
+    color: #fff;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgba(255,165,0,1);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: rgba(255,165,0,0.8);
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+  
+  .cart h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    color: rgba(255, 165, 0, 1);
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(255, 165, 0, 1);
+  }
+  .cart-header {
+    position: relative;
+  }
+
+  .cart-items {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .cart-items:not(:empty) {
+    flex-grow: 1;
+  }
+  .cart-overlay.cart--empty .cart-empty {
+    display: flex;
+  }
+  .cart-overlay.cart--empty .cart-total {
+    display: none;
+  }
+  .cart-empty {
+    display: none;
+    flex-direction: column;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .cart-empty.active {
+    display: flex;
+  }
+  .cart-empty h3 {
+    margin-bottom: 8px;
+  }
+  .cart-item {
+    position: relative;
+    display: flex;
+    color: #fff;
+    column-gap: 8px;
+  }
+  .cart-item__details {
+    display: flex;
+    flex-direction: column;
+  }
+  .cart-item__price {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+  .cart-item__img img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  .cart-item__size {
+    text-transform: capitalize;
+  }
+  .cart-item__remove {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    bottom: 16px;
+  }
+  .cart-item__remove i {
+    pointer-events: none;
+  }
+  
+  .cart-total {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 165, 0, 1);
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: #fff;
+  }
+  .cart-item p {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none;
+  }
+  
+  .cart-item p {
+    margin: 0;
+  }
+  
+  .close-cart-btn {
+    padding: 9px 25px;
+    background-color: rgba(255, 165, 0, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .close-cart-btn:hover {
+    background-color: rgba(255, 165, 0, 0.8);
+  }
+  
+  .cart-item {
+    margin-bottom: 10px; 
+    padding-bottom: 10px; 
+    border-bottom: 1px solid #fff; 
+  }
+  
+  .cart-item:last-child {
+    border-bottom: none; 
+  }
+  
+  .cart-item__additionals{
+    color: rgba(255, 165, 0, 1);
+  }
+  /*================ KOSZYK KONIEc ============*/
+  
