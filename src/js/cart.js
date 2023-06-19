@@ -19,66 +19,70 @@ class Cart {
   }
 
   renderCartItems() {
-  this.dom.cartItems.textContent = "";
-  if (this.getCartItems() && this.getCartItems().items.length > 0) {
-    const { items } = this.getCartItems();
-    this.setTotalCartValue();
-    this.setCartCountBadge();
-    if (this.dom.cart.classList.contains("cart--empty")) {
-      this.dom.cart.classList.remove("cart--empty");
+    this.dom.cartItems.textContent = "";
+    if (this.getCartItems() && this.getCartItems().items.length > 0) {
+      const { items } = this.getCartItems();
+      this.setTotalCartValue();
+      this.setCartCountBadge();
+      if (this.dom.cart.classList.contains("cart--empty")) {
+        this.dom.cart.classList.remove("cart--empty");
+      }
+  
+      if (items.length > 0) {
+        items.forEach((item, index) => {
+          const itemTemplate = this.dom.cartItemTemplate.content.cloneNode(true);
+          itemTemplate.querySelector(".cart-item__title").textContent = item.name;
+          itemTemplate.querySelector(".cart-item__size").textContent = item.rozmiar.replace(",", " - ");
+          itemTemplate.querySelector(".cart-item__img img").src = item.img;
+          itemTemplate.querySelector(".cart-item__price").textContent = `${item.total_price} zł`;
+          itemTemplate.querySelector(".cart-item__remove").setAttribute("data-line-item-id", index);
+  
+          const ingredientKeys = Object.keys(item).filter(key => key.includes("skladnik"));
+          const sauceKeys = Object.keys(item).filter(key => key.includes("sos"));
+  
+          if (ingredientKeys.length > 0) {
+            const ingredientTemplate = document.createElement("span");
+            ingredientTemplate.classList.add("cart-item__additionals");
+            ingredientTemplate.textContent = "Dodatkowe składniki: ";
+            itemTemplate.querySelector(".cart-item__details").appendChild(ingredientTemplate);
+  
+            ingredientKeys.forEach(key => {
+              const ingredientValue = item[key].replace(",", " - ");
+              const ingredientItem = document.createElement("span");
+              ingredientItem.textContent = `${ingredientValue} zł`;
+              itemTemplate.querySelector(".cart-item__details").appendChild(ingredientItem);
+            });
+          }
+  
+          if (sauceKeys.length > 0) {
+            const sauceTemplate = document.createElement("span");
+            sauceTemplate.classList.add("cart-item__additionals");
+            sauceTemplate.textContent = "Sosy: ";
+            itemTemplate.querySelector(".cart-item__details").appendChild(sauceTemplate);
+  
+            sauceKeys.forEach(key => {
+              const sauceValue = item[key].replace(",", " - ");
+              const sauceItem = document.createElement("span");
+              sauceItem.textContent = `${sauceValue} zł`;
+              itemTemplate.querySelector(".cart-item__details").appendChild(sauceItem);
+            });
+          }
+  
+          if (item.komentarz && item.komentarz.trim() !== "") {
+            const commentTemplate = document.createElement("span");
+            commentTemplate.innerHTML = `<span style="color: rgba(255, 165, 0, 1);">Komentarz: <br></span>${item.komentarz}`;
+            itemTemplate.querySelector(".cart-item__comment").appendChild(commentTemplate);
+          }
+  
+          this.dom.cartItems.appendChild(itemTemplate);
+        });
+  
+        this.removeFromCart();
+      }
+    } else {
+      this.dom.cart.classList.add("cart--empty");
     }
-
-    if (items.length > 0) {
-      items.forEach((item, index) => {
-        const itemTemplate = this.dom.cartItemTemplate.content.cloneNode(true);
-        itemTemplate.querySelector(".cart-item__title").textContent = item.name;
-        itemTemplate.querySelector(".cart-item__comment").textContent = item.komentarz;
-        itemTemplate.querySelector(".cart-item__size").textContent = item.rozmiar.replace(",", " - ");
-        itemTemplate.querySelector(".cart-item__img img").src = item.img;
-        itemTemplate.querySelector(".cart-item__price").textContent = `${item.total_price} zł`;
-        itemTemplate.querySelector(".cart-item__remove").setAttribute("data-line-item-id", index);
-
-        const ingredientKeys = Object.keys(item).filter(key => key.includes("skladnik"));
-        const sauceKeys = Object.keys(item).filter(key => key.includes("sos"));
-
-        if (ingredientKeys.length > 0) {
-          const ingredientTemplate = document.createElement("span");
-          ingredientTemplate.classList.add("cart-item__additionals");
-          ingredientTemplate.textContent = "Dodatkowe składniki: ";
-          itemTemplate.querySelector(".cart-item__details").appendChild(ingredientTemplate);
-
-          ingredientKeys.forEach(key => {
-            const ingredientValue = item[key].replace(",", " - ");
-            const ingredientItem = document.createElement("span");
-            ingredientItem.textContent = `${ingredientValue} zł`;
-            itemTemplate.querySelector(".cart-item__details").appendChild(ingredientItem);
-          });
-        }
-
-        if (sauceKeys.length > 0) {
-          const sauceTemplate = document.createElement("span");
-          sauceTemplate.classList.add("cart-item__additionals");
-          sauceTemplate.textContent = "Sosy: ";
-          itemTemplate.querySelector(".cart-item__details").appendChild(sauceTemplate);
-
-          sauceKeys.forEach(key => {
-            const sauceValue = item[key].replace(",", " - ");
-            const sauceItem = document.createElement("span");
-            sauceItem.textContent = `${sauceValue} zł`;
-            itemTemplate.querySelector(".cart-item__details").appendChild(sauceItem);
-          });
-        }
-
-        this.dom.cartItems.appendChild(itemTemplate);
-      });
-
-      this.removeFromCart();
-    }
-  } else {
-    this.dom.cart.classList.add("cart--empty");
   }
-}
-
   removeFromCart() {
     const removeBttns = this.dom.cart.querySelectorAll(".cart-item__remove");
     const cartState = this.getCartItems();
